@@ -2,16 +2,6 @@
 
 mkdir -p ~/elabftw && cd ~/elabftw
 
-curl -o docker-compose.yml https://get.elabftw.net/docker-compose.yml
+wget https://raw.githubusercontent.com/elabftw/elabimg/master/docker-compose.yml -O docker-compose.yml
 
-sudo docker-compose up -d
-
-
-
-rm -f ~/elabftw/docker-compose.yml
-
-wget https://get.elabftw.net/docker-compose.yml -O ~/elabftw/docker-compose.yml
-
-cat ~/elabftw/docker-compose.yml | head -n 10
-
-sudo docker-compose up -d
+cat docker-compose.yml | head -n 10
