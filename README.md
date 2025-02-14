@@ -23,3 +23,5 @@ nano ~/elabftw/docker-compose.yml
     volumes:
       - ./php-config/php-fpm.conf:/etc/php83/php-fpm.d/elabpool.conf
 
+
+sudo docker-compose up -d --build
