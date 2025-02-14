@@ -1,8 +1,6 @@
 # eLAB
 
-curl -so docker-compose.yml "https://get.elabftw.net/?config"
-
-curl -o docker-compose.yml https://raw.githubusercontent.com/elabftw/elabimg/master/src/docker-compose.yml-EXAMPLE
+rm -rf ~/elabftw/php-config
 
 mkdir -p ~/elabftw/php-config
 nano ~/elabftw/php-config/php-fpm.conf
@@ -23,4 +21,5 @@ clear_env = no
 nano ~/elabftw/docker-compose.yml
 
     volumes:
-      - ./php-config/php-fpm.conf:/etc/php83/php-fpm.conf
+      - ./php-config/php-fpm.conf:/etc/php83/php-fpm.d/elabpool.conf
+
